@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cmath>
+#include <functional>
+#include <vestor>
+#include <iomanip>
+#include <fstream>
+#include <string>
+using namespace std;
+
+using Func = function<double(double)>;
+
+struct TestFunction {
+   string name;
+   Func F;
+   Func f1_exact;
+   Func f2_exact;
+};
