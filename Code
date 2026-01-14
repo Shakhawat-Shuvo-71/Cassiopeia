@@ -160,5 +160,27 @@ sv1 << "h,forward_error,backward_error,central_error\n";
 
 
 
+//member-10
+       cout << setw(12) << setprecision(3) << fixed << h << setprecision(8)
+            << setw(14) << fwd
+            << setw(14) << bwd
+            << setw(14) << cen
+            << setw(14) << exact
+            << setw(14) << errF
+            << setw(14) << errB
+            << setw(14) << errC
+            << "\n";
+
+
+       csv2 << h << "," << errF << "," << errB << "," << errC << "\n";
+   }
+
+
+   csv1.close();
+   csv2.close();
+
+
+   return 0;
+}
 
    
