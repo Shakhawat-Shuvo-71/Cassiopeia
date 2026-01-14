@@ -6,6 +6,7 @@ Numerical Differentiation – Forward, Backward & Central Difference Methods
 # Project Overview
 This project is developed as part of the Numerical Methods course.
  The objective is to numerically approximate the first and second derivatives of a function using finite difference methods and compare them with the exact analytical derivatives.
+ 
 The program is written in C++ and allows the user to choose a function, enter a value of xxx, and compute:
 Forward difference approximation
 
@@ -48,23 +49,32 @@ Analyze which numerical method is the most accurate.
 
 
 # Finite Difference Formulas
+
 First Derivative
+
 Forward Difference
  f′(x) ≈ ( f(x + h) − f(x) ) / h
+ 
 Backward Difference
  f′(x) ≈ ( f(x) − f(x − h) ) / h
+ 
 Central Difference
  f′(x) ≈ ( f(x + h) − f(x − h) ) / (2h)
+ 
 Forward and Backward methods have an error of order O(h),
  while Central Difference has error of order O(h²), making it more accurate.
 
 Second Derivative
+
 Forward Difference
  f″(x) ≈ ( f(x + 2h) − 2f(x + h) + f(x) ) / h²
+ 
 Backward Difference
  f″(x) ≈ ( f(x) − 2f(x − h) + f(x − 2h) ) / h²
+ 
 Central Difference
  f″(x) ≈ ( f(x + h) − 2f(x) + f(x − h) ) / h²
+ 
 Central difference is theoretically more accurate because its truncation error is O(h²).
 
 # Step Sizes Used
@@ -88,31 +98,22 @@ Central Difference
 
 # Code Implementation & Explanation
 This project is implemented in C++ using a clean and modular structure to compute numerical derivatives and their errors efficiently.
+
 Function Structure
+
 The program uses a structured approach to store each test function and its exact derivatives:
+
 struct TestFunction {
+
     string name;
+    
     Func f;        // original function f(x)
+    
     Func f1_exact; // exact first derivative
+    
     Func f2_exact; // exact second derivative
+    
 };
-
-Test Functions
-The following functions are used for testing:
-Function
-First Derivative
-Second Derivative
-sin(x)
-cos(x)
-−sin(x)
-e^x
-e^x
-e^x
-x³
-3x²
-6x
-
-These analytical derivatives are used as the reference for error calculation.
 
 Numerical Differentiation Functions
 The program implements all three finite difference formulas for both first and second derivatives.
@@ -127,41 +128,53 @@ Central difference
 
 
 Each is computed using a separate function such as:
+
 double forward_diff(Func f, double x, double h)
+
 double backward_diff(Func f, double x, double h)
+
 double central_diff(Func f, double x, double h)
 
 Second derivative
+
 Similarly, forward, backward, and central difference formulas are implemented as:
+
 double forward_diff2(Func f, double x, double h)
+
 double backward_diff2(Func f, double x, double h)
+
 double central_diff2(Func f, double x, double h)
 
 
+
 Derivative Calculation Process
+
 For the user-selected function and a given value of xxx, the program:
-Computes numerical derivatives using forward, backward, and central difference formulas.
+
+ 1. Computes numerical derivatives using forward, backward, and central difference formulas.
 
 
-Computes the exact derivative using analytical expressions.
+ 2. Computes the exact derivative using analytical expressions.
 
 
-Computes absolute errors using:
+ 3. Computes absolute errors using:
 
 
-Error=Error = | Exact Value − Numerical Value |
+ Error=Error = | Exact Value − Numerical Value |
+ 
 This is done separately for:
-First derivative
 
-
-Second derivative
+First derivative and Second derivative
 
 
 The following step sizes are used in the experiment:
+
 h = 0.1, 0.05, 0.01, 0.005, 0.001
 
 Error Storage and CSV Generation
+
 The program automatically creates two CSV files:
+
 function_X_first.csv
 
 
@@ -169,24 +182,26 @@ function_X_second.csv
 
 
 Each file contains:
+
 h, forward_error, backward_error, central_error
 
 These files are later used to plot Error vs Step Size (h) graphs.
 
 User Interaction
+
 The program is fully menu-driven.
+
 The user selects:
-A function
+
+1. A function
 
 
-A value of xxx
+2. A value of x
 
 
 The program then prints formatted tables for:
-First derivative
 
-
-Second derivative
+First derivative and Second derivative
 
 
 along with all numerical values and errors.
