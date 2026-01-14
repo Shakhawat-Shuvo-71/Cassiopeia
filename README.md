@@ -160,7 +160,7 @@ Second derivative
 The following step sizes are used in the experiment:
 h = 0.1, 0.05, 0.01, 0.005, 0.001
 
-Error Storage and CSV Generation
+# Error Storage and CSV Generation
 The program automatically creates two CSV files:
 function_X_first.csv
 
@@ -192,7 +192,7 @@ Second derivative
 along with all numerical values and errors.
 Invalid function choices are handled safely.
 
-How to Compile and Run
+# How to Compile and Run
 Step 1: Compile the program
 Open terminal in the project folder and type:
 g++ code.cpp -o diff
@@ -225,7 +225,7 @@ Second derivative
 showing numerical values, exact values, and errors for different step sizes.
 CSV files are generated automatically for graph plotting.
 
-Sample Numerical Result
+# Sample Numerical Result
 Example for f(x) = sin(x) at x = 1
 | h | Forward | Backward | Central | Exact | Err(F) | Err(B) | Err(C) |
 |----|----------|-----------|-----------|--------|---------|---------|---------|
@@ -234,12 +234,12 @@ Example for f(x) = sin(x) at x = 1
 | 0.01 | 0.53609 | 0.54450 | 0.54029 | 0.54030 | 0.00422 | 0.00420 | 0.00001 |
 This table shows that the Central Difference method gives much smaller error.
 
-Data Description
+# Data Description
 The program generates CSV files containing:
 h, forward_error, backward_error, central_error
 These data files are used to draw Error vs Step Size (h) graphs for all methods.
 
-Graph Interpretation and Discussion
+# Graph Interpretation and Discussion
 From the log–log error plots:
 Forward and Backward Difference methods show linear decrease in error.
 
@@ -260,7 +260,7 @@ When hhh becomes extremely small, rounding errors due to floating-point arithmet
 Overall, Central Difference gives the most reliable and accurate results.
 
 
-Conclusion
+# Conclusion
 Finite difference methods provide an effective way to approximate derivatives when analytical solutions are not available.
 Among the three methods, the Central Difference Method gives the best accuracy for both first and second derivatives because of its higher order of convergence.
 This project successfully demonstrates how numerical differentiation accuracy depends on step size and method selection.
