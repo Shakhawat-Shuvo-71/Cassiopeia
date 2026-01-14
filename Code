@@ -59,13 +59,11 @@ int main(){
    cout << "        NUMERICAL DIFFERENTIATION       \n";
    cout << "========================================\n\n";
 
-
-   cout << "Choose function:\n";
+cout << "Choose function:\n";
    for(size_t i=0;i<funcs.size();i++)
        cout << " " << i+1 << ". " << funcs[i].name << "\n";
 
-
-   int choice;
+int choice;
    while(true){
        cout << "\nEnter choice (1-" << funcs.size() << "): ";
        cin >> choice;
@@ -77,25 +75,20 @@ int main(){
    cout << "Enter x: ";
    cin >> x;
 
-
-   vector<double> hs = {0.1,0.05,0.01,0.005,0.001};
+ector<double> hs = { 0.1,0.05,0.01,0.005,0.001};
    auto t = funcs[choice-1];
+string base = "function_" + to_string(choice);
 
-
-   string base = "function_" + to_string(choice);
-
-
-   ofstream csv1(base + "_first.csv");
+ofstream csv1(base + "_first.csv");
    ofstream csv2(base + "_second.csv");
 
-
-   csv1 << "h,forward_error,backward_error,central_error\n";
+sv1 << "h,forward_error,backward_error,central_error\n";
    csv2 << "h,forward2_error,backward2_error,central2_error\n";
 
 
    cout << fixed << setprecision(8);
 
-   // ---------- First derivative ----------
+   // --------- First derivative ---------
    cout << "\n------------- First Derivative -------------\n";
    cout << left
         << setw(12) << "h"
