@@ -160,7 +160,7 @@ Second derivative
 The following step sizes are used in the experiment:
 h = 0.1, 0.05, 0.01, 0.005, 0.001
 
-# Error Storage and CSV Generation
+Error Storage and CSV Generation
 The program automatically creates two CSV files:
 function_X_first.csv
 
