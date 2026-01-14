@@ -14,8 +14,10 @@ struct TestFunction {
    Func F;
    Func f1_exact;
    Func f2_exact;
+
 };
-// -------- 1st derivatives --------
+
+// ----- 1st derivatives -----
 double forward_diff(Func f, double x, double h){ return (f(x+h)-f(x))/h; }
 double backward_diff(Func f, double x, double h){ return (f(x)-f(x-h))/h; }
 double central_diff(Func f, double x, double h){ return (f(x+h)-f(x-h))/(2*h); }
