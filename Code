@@ -70,6 +70,29 @@ int main(){
        if(choice>=1 && choice<= (int)funcs.size()) break;
        cout << "Invalid choice! Please enter a valid number.\n";
 
+//member-6
+   double x;
+   cout << "Enter x: ";
+   cin >> x;
+
+
+   vector<double> hs = {0.1,0.05,0.01,0.005,0.001};
+   auto t = funcs[choice-1];
+
+
+   string base = "function_" + to_string(choice);
+
+
+   ofstream csv1(base + "_first.csv");
+   ofstream csv2(base + "_second.csv");
+
+
+   csv1 << "h,forward_error,backward_error,central_error\n";
+   csv2 << "h,forward2_error,backward2_error,central2_error\n";
+
+
+   cout << fixed << setprecision(8);
+
 //last part
 cout << setw(12) << setprecision(3) << fixed << h << setprecision(8)
              << setw(14) << fwd
