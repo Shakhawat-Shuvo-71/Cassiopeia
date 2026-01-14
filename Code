@@ -17,7 +17,7 @@ struct TestFunction {
 
 };
 
-// ----- 1st derivatives -----
+// ------ 1st derivatives ------
 double forward_diff(Func f, double x, double h){ return (f(x+h)-f(x))/h; }
 double backward_diff(Func f, double x, double h){ return (f(x)-f(x-h))/h; }
 double central_diff(Func f, double x, double h){ return (f(x+h)-f(x-h))/(2*h); }
@@ -31,6 +31,7 @@ double backward_diff2(Func f, double x, double h){
 double central_diff2(Func f, double x, double h){
     return (f(x+h) - 2*f(x) + f(x-h)) / (h*h);
 }
+
 //member-4
 int main(){
 
@@ -54,14 +55,17 @@ int main(){
            [](double x){ return 6*x; }
        }
    };
+
 //member-5
-   cout << "\n========================================\n";
-   cout << "        NUMERICAL DIFFERENTIATION       \n";
-   cout << "========================================\n\n";
+   cout << "\n=====================================\n";
+   cout << "       NUMERICAL DIFFERENTIATION       \n";
+   cout << "=======================================\n\n";
+
 
 cout << "Choose function:\n";
    for(size_t i=0;i<funcs.size();i++)
        cout << " " << i+1 << ". " << funcs[i].name << "\n";
+
 
 int choice;
    while(true){
