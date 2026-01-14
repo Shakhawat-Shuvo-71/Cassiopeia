@@ -163,7 +163,7 @@ For the user-selected function and a given value of xxx, the program:
  3. Computes absolute errors using:
 
 
- Error=Error = | Exact Value − Numerical Value |
+ Error=Error =  Exact Value − Numerical Value 
  
 This is done separately for:
 
