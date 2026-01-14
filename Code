@@ -29,6 +29,30 @@ double backward_diff2(Func f, double x, double h){
 double central_diff2(Func f, double x, double h){
     return (f(x+h) - 2*f(x) + f(x-h)) / (h*h);
 }
+//member-4
+int main(){
+
+
+   vector<TestFunction> funcs = {
+       {"f(x) = sin(x)",
+           [](double x){ return sin(x); },
+           [](double x){ return cos(x); },
+           [](double x){ return -sin(x); }
+       },
+
+
+       {"f(x) = e^x",
+           [](double x){ return exp(x); },
+           [](double x){ return exp(x); },
+           [](double x){ return exp(x); }
+       },
+       {"f(x) = x^3",
+           [](double x){ return x*x*x; },
+           [](double x){ return 3*x*x; },
+           [](double x){ return 6*x; }
+       }
+   };
+
 //last part
 cout << setw(12) << setprecision(3) << fixed << h << setprecision(8)
              << setw(14) << fwd
