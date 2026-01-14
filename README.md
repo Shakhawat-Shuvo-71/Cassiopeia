@@ -1,9 +1,9 @@
-Numerical Differentiation Using Finite Difference Methods
+# Numerical Differentiation Using Finite Difference Methods
 Forward, Backward & Central Difference for First and Second Derivatives
-Project Title
+# Project Title
 Numerical Differentiation – Forward, Backward & Central Difference Methods
 
-Project Overview
+# Project Overview
 This project is developed as part of the Numerical Methods course.
  The objective is to numerically approximate the first and second derivatives of a function using finite difference methods and compare them with the exact analytical derivatives.
 The program is written in C++ and allows the user to choose a function, enter a value of xxx, and compute:
@@ -26,7 +26,7 @@ The results are also saved into CSV files which are later used to plot Error vs 
 
 
 
-Objectives of This Project
+# Objectives of This Project
 Implement Forward, Backward, and Central Difference methods.
 
 
@@ -47,7 +47,7 @@ Analyze which numerical method is the most accurate.
 
 
 
-Finite Difference Formulas
+# Finite Difference Formulas
 First Derivative
 Forward Difference
  f′(x) ≈ ( f(x + h) − f(x) ) / h
@@ -67,12 +67,12 @@ Central Difference
  f″(x) ≈ ( f(x + h) − 2f(x) + f(x − h) ) / h²
 Central difference is theoretically more accurate because its truncation error is O(h²).
 
-Step Sizes Used
+# Step Sizes Used
 The following step sizes are used in the experiment:
 h = 0.1, 0.05, 0.01, 0.005, 0.001
 These values help analyze how the numerical error changes as h decreases.
 
-Error Calculation
+# Error Calculation
 For each method, the absolute error is computed as:
 Error = | Exact Value − Numerical Value |
 Errors are calculated separately for:
@@ -86,7 +86,7 @@ Central Difference
 
 
 
-Code Implementation & Explanation
+# Code Implementation & Explanation
 This project is implemented in C++ using a clean and modular structure to compute numerical derivatives and their errors efficiently.
 Function Structure
 The program uses a structured approach to store each test function and its exact derivatives:
@@ -232,8 +232,8 @@ Example for f(x) = sin(x) at x = 1
 | 0.1 | 0.49736 | 0.58144 | 0.53940 | 0.54030 | 0.04294 | 0.04114 | 0.00090 |
 | 0.05 | 0.51904 | 0.56111 | 0.54008 | 0.54030 | 0.02126 | 0.02081 | 0.00023 |
 | 0.01 | 0.53609 | 0.54450 | 0.54029 | 0.54030 | 0.00422 | 0.00420 | 0.00001 |
-This table shows that the Central Difference method gives much smaller error.
 
+This table shows that the Central Difference method gives much smaller error.
 # Data Description
 The program generates CSV files containing:
 h, forward_error, backward_error, central_error
