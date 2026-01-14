@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <functional>
-#include <vestor>
+#include <vector>
 #include <iomanip>
 #include <fstream>
 #include <string>
@@ -11,7 +11,7 @@ using Func = function<double(double)>;
 
 struct TestFunction {
    string name;
-   Func F;
+   Func f;
    Func f1_exact;
    Func f2_exact;
 
@@ -21,6 +21,7 @@ struct TestFunction {
 double forward_diff(Func f, double x, double h){ return (f(x+h)-f(x))/h; }
 double backward_diff(Func f, double x, double h){ return (f(x)-f(x-h))/h; }
 double central_diff(Func f, double x, double h){ return (f(x+h)-f(x-h))/(2*h); }
+
 // -------- 2nd derivatives --------
 double forward_diff2(Func f, double x, double h){
     return (f(x+2*h) - 2*f(x+h) + f(x)) / (h*h);
@@ -76,20 +77,20 @@ int choice;
        cout << "Invalid choice! Please enter a valid number.\n";
 
 
-
+   }
 
    double x;
    cout << "Enter x: ";
    cin >> x;
 
-ector<double> hs = { 0.1,0.05,0.01,0.005,0.001};
+vector<double> hs = { 0.1,0.05,0.01,0.005,0.001};
    auto t = funcs[choice-1];
 string base = "function_" + to_string(choice);
 
 ofstream csv1(base + "_first.csv");
    ofstream csv2(base + "_second.csv");
 
-sv1 << "h,forward_error,backward_error,central_error\n";
+csv1 << "h,forward_error,backward_error,central_error\n";
    csv2 << "h,forward2_error,backward2_error,central2_error\n";
 
 
