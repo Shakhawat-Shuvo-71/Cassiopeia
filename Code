@@ -58,8 +58,6 @@ int main(){
 
 
 
-
-
    cout << "\n=====================================\n";
    cout << "       NUMERICAL DIFFERENTIATION       \n";
    cout << "=======================================\n\n";
@@ -76,7 +74,6 @@ int choice;
        cin >> choice;
        if(choice>=1 && choice<= (int)funcs.size()) break;
        cout << "Invalid choice! Please enter a valid number.\n";
-
 
 
 
@@ -125,8 +122,6 @@ sv1 << "h,forward_error,backward_error,central_error\n";
 
 
 
-
-
        cout << setw(12) << setprecision(3) << fixed << h << setprecision(8)
             << setw(14) << fwd
             << setw(14) << bwd
@@ -140,8 +135,6 @@ sv1 << "h,forward_error,backward_error,central_error\n";
 
        csv1 << h << "," << errF << "," << errB << "," << errC << "\n";
    }
-
-
 
 
 
@@ -190,7 +183,6 @@ sv1 << "h,forward_error,backward_error,central_error\n";
 
        csv2 << h << "," << errF << "," << errB << "," << errC << "\n";
    }
-
 
 
    csv1.close();
