@@ -119,22 +119,3 @@ int main(){
        double errC = fabs(exact - cen);
 
 
-//last part
-cout << setw(12) << setprecision(3) << fixed << h << setprecision(8)
-             << setw(14) << fwd
-             << setw(14) << bwd
-             << setw(14) << cen
-             << setw(14) << exact
-             << setw(16) << fabs(exact-cen)
-             << "\n";
-
-        csv2 << h << "," << fabs(exact-fwd) << ","
-                  << fabs(exact-bwd) << ","
-                  << fabs(exact-cen) << "\n";
-    }
-
-    csv1.close();
-    csv2.close();
-
-    return 0;
-}
