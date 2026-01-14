@@ -28,7 +28,7 @@ The results are also saved into CSV files which are later used to plot Error vs 
 
 
 # Objectives of This Project
-Implement Forward, Backward, and Central Difference methods.
+Implement Forward, Backward, and Central Difference methods using C++ programming
 
 
 Approximate first and second derivatives numerically.
@@ -37,7 +37,7 @@ Approximate first and second derivatives numerically.
 Compare numerical derivatives with exact analytical derivatives.
 
 
-Study the effect of step size h on accuracy.
+Analyze how step size (h) affects numerical accuracy
 
 
 Generate CSV data for plotting graphs.
@@ -84,7 +84,7 @@ These values help analyze how the numerical error changes as h decreases.
 
 # Error Calculation
 For each method, the absolute error is computed as:
-Error = | Exact Value − Numerical Value |
+Error =  Exact Value − Numerical Value 
 Errors are calculated separately for:
 Forward Difference
 
