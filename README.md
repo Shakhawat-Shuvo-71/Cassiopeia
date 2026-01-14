@@ -46,6 +46,9 @@ Generate CSV data for plotting graphs.
 Analyze which numerical method is the most accurate.
 
 
+Verify theoretical convergence through numerical experiments
+
+
 
 
 # Finite Difference Formulas
@@ -75,9 +78,9 @@ Backward Difference
 Central Difference
  f″(x) ≈ ( f(x + h) − 2f(x) + f(x − h) ) / h²
  
-Central difference is theoretically more accurate because its truncation error is O(h²).
+Central difference is theoretically more accurate because it's truncation error is O(h²).
 
-# Step Sizes Used
+# Step Size Used
 The following step sizes are used in the experiment:
 h = 0.1, 0.05, 0.01, 0.005, 0.001
 These values help analyze how the numerical error changes as h decreases.
