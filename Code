@@ -36,7 +36,6 @@ double central_diff2(Func f, double x, double h){
 
 int main(){
 
-
    vector<TestFunction> funcs = {
        {"f(x) = sin(x)",
            [](double x){ return sin(x); },
@@ -146,7 +145,8 @@ sv1 << "h,forward_error,backward_error,central_error\n";
 
 
 
-   // ---------- Second derivative ----------
+ 
+// ---------- Second derivative ----------
    cout << "\n------------- Second Derivative ------------\n";
    cout << left
         << setw(12) << "h"
@@ -190,6 +190,7 @@ sv1 << "h,forward_error,backward_error,central_error\n";
 
        csv2 << h << "," << errF << "," << errB << "," << errC << "\n";
    }
+
 
 
    csv1.close();
