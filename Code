@@ -52,6 +52,23 @@ int main(){
            [](double x){ return 6*x; }
        }
    };
+//member-5
+   cout << "\n========================================\n";
+   cout << "        NUMERICAL DIFFERENTIATION       \n";
+   cout << "========================================\n\n";
+
+
+   cout << "Choose function:\n";
+   for(size_t i=0;i<funcs.size();i++)
+       cout << " " << i+1 << ". " << funcs[i].name << "\n";
+
+
+   int choice;
+   while(true){
+       cout << "\nEnter choice (1-" << funcs.size() << "): ";
+       cin >> choice;
+       if(choice>=1 && choice<= (int)funcs.size()) break;
+       cout << "Invalid choice! Please enter a valid number.\n";
 
 //last part
 cout << setw(12) << setprecision(3) << fixed << h << setprecision(8)
